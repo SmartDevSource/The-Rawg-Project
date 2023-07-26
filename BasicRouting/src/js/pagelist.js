@@ -135,7 +135,6 @@ function putContent(article, index, alength) {
     (resp=>resp.json()).then(data=>{
       if (data.developers.length!=0){
         dev = data.developers[0].name;
-        console.log(dev);
         let c = document.getElementsByName(article.slug);
         c[0].querySelector(".dev").textContent = "Développeur : "+dev;
       }
