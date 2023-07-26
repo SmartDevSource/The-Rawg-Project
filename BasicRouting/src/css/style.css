@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.weblogo{
+  user-select: none;
+  font-weight: bold;
+  font-size: 50px;
+  color: #D20A32;
+  font-family: 'Roboto Mono';
+}
+
+.webdescription{
+  color:white;
+  margin-bottom: 50px !important;
+}
+
+html{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.hidden{
+  display: none;
+}
+
+*{
+  font-family: 'Roboto Mono';
+}
+
+body{
+  background-color: rgb(37, 37, 37);
+}
+
+.screenshot{
+  width:300px !important;
+  height: auto;
+}
+
+.screenshots{
+  text-align: center;
+}
+
+.platformlogo{
+  width: 40px;
+  border-radius: 5px;
+}
+
+a{
+  font-size: 22px;
+  text-decoration: none;
+  transition: 0.3s;
+  color: rgb(230, 230, 230);
+  padding: 10px;
+}
+
+a, a:visited {
+	text-decoration: none;
+	position: relative;
+	color: rgb(230, 230, 230);
+	
+	&:after {
+		content: '';
+		height: 3px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		background: rgb(227, 227, 227);
+		transition: 0.2s;
+	}
+
+	&:hover:after {
+		width: 100%;
+	}
+}
+
+h1, h2, h3, p{
+  color:white;
+}
+
+.cardGame {
+  color:white;
+  width: 400px;
+  border: 2px solid rgb(70, 70, 70);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: rgb(51, 51, 51);
+  transition: .3s;
+}
+
+.cardGame:hover{
+  cursor: pointer;
+  transform: .3s;
+  transform: scale(1.05);
+}
+
+.picture {
+  width: 400px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  transform: translateY(4px);
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cstm-input{
+  font-size: 20px;
+  font-family: 'Roboto Mono';
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: rgb(249, 236, 190);
+}
+
+.loadtext{
+  text-align: center;
+  color:white;
+}
+
+.cstm-button{
+  font-size: 20px;
+  font-family: 'Roboto Mono';
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: rgb(221, 221, 221);
+  cursor: pointer;
+  border: none;
+  transition: .3s;
+}
+
+.showmore-button:hover{
+  background-color: rgb(218, 152, 60);
+  transition: .3s;
+}
+
+.showmore-button{
+  font-size: 20px;
+  font-family: 'Roboto Mono';
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: rgb(251, 182, 86);
+  cursor: pointer;
+  border: none;
+  transition: .3s;
+}
+
+.cstm-button:hover{
+  background-color: rgb(187, 187, 187);
+  transition: .3s;
+}
+
+
+.cstm-input::selection{
+  background-color: rgb(221, 206, 149);
+}
+
+::selection{
+  background-color: rgb(85, 85, 85);
+}
