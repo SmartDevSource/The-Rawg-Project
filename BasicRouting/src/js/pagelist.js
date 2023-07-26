@@ -100,8 +100,6 @@ function putContent(article, index, alength) {
   let platforms = article.platforms;
   let imgPlatforms = '';
 
-  console.log(article.tags);
-
   if (platforms !=null){
     for(let i = 0 ; i < platforms.length ; i++){
 
@@ -132,6 +130,17 @@ function putContent(article, index, alength) {
     }
   }
 
+    let dev = '';
+  fetch(`https://api.rawg.io/api/games/${article.slug}?key=${process.env.API_KEY}`).then
+    (resp=>resp.json()).then(data=>{
+      if (data.developers.length!=0){
+        dev = data.developers[0].name;
+        console.log(dev);
+        let c = document.getElementsByName(article.slug);
+        c[0].querySelector(".dev").textContent = "Développeur : "+dev;
+      }
+    });
+    
   content += `
     <article class="cardGame hidden" name = ${article.slug}>
     <h4>${article.name}</h4>
@@ -141,6 +150,7 @@ function putContent(article, index, alength) {
     </div>
     <div class = "contenthover hidden">
       <h4>Date de sortie : ${article.released}</h4>
+      <h4 class = "dev"></h4>
       <h4>Note : ${article.rating}/5 - ${article.ratings_count} votes</h4>
     </div>
     </article>
