@@ -140,7 +140,7 @@ function putContent(article, index, alength) {
         c[0].querySelector(".dev").textContent = "Développeur : "+dev;
       }
     });
-    
+
   content += `
     <article class="cardGame hidden" name = ${article.slug}>
     <h4>${article.name}</h4>
